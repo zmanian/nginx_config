@@ -2,18 +2,18 @@
 
 server {
         listen 443 ssl;
-        server_name restorethefourthsf.com;
+        server_name shameonfeinstein.org;
 
-        root /home/rtfsf/restore4thsf.github.io;
+        root /home/rtfsf/shameonfeinstein_static;
         index index.html index.htm;
 
         ssl on;
-        ssl_certificate /etc/nginx/ssl/restorethefourthsf.pem;
+        ssl_certificate /etc/nginx/ssl/shameonfeinstein.pem;
         ssl_certificate_key /etc/nginx/ssl/rtfsf.key; 
         add_header Strict-Transport-Security max-age=31536000;
 
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
         ssl_prefer_server_ciphers on;
         ssl_ciphers EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA256:EECDH+aRSA+RC4:EDH+aRSA:EECDH:RC4:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS;
-      
+
 }
