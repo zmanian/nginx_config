@@ -1,0 +1,12 @@
+# HTTPS server
+
+server {
+        listen 80;
+        server_name shameonfeinstein.org;
+
+        root /home/rtfsf/shameonfeinstein_static;
+        index index.html index.htm;
+
+
+
+}
