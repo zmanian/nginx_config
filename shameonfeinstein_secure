@@ -16,4 +16,12 @@ server {
         ssl_prefer_server_ciphers on;
         ssl_ciphers EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA256:EECDH+aRSA+RC4:EDH+aRSA:EECDH:RC4:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS;
 
+        location /sign {  
+    
+          proxy_pass http://localhost:5000; # my existing apache instance  
+          proxy_set_header Host $host;  
+    
+          # re-write redirects to http as to https, example: /home  
+          proxy_redirect http:// https://;  
+      }  
 }

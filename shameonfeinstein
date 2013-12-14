@@ -7,6 +7,12 @@ server {
         root /home/rtfsf/shameonfeinstein_static;
         index index.html index.htm;
 
+        location /sign {  
+    
+          proxy_pass http://localhost:5000; # my existing apache instance  
+          proxy_set_header Host $host;  
+    
+      }  
 
 
 }
