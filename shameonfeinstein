@@ -4,15 +4,7 @@ server {
         listen 80;
         server_name shameonfeinstein.org;
 
-        root /home/rtfsf/shameonfeinstein_static;
-        index index.html index.htm;
-
-        location /sign {  
-    
-          proxy_pass http://localhost:5000; # my existing apache instance  
-          proxy_set_header Host $host;  
-    
-      }  
+        return 301 https://$host$request_uri;
 
 
 }
