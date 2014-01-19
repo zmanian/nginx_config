@@ -16,6 +16,18 @@ server {
         ssl_prefer_server_ciphers on;
         ssl_ciphers EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA256:EECDH+aRSA+RC4:EDH+aRSA:EECDH:RC4:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS;
 
+	location /piwik {
+          root /home/rtfsf/piwik/;
+          index index.php;
+          location ~* \.php$ {
+            include /etc/nginx/fastcgi_params;
+            try_files           $uri =404;
+            fastcgi_index index.php;
+            fastcgi_param       SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+          }
+        }        
+
         location /sign {  
     
           proxy_pass http://localhost:5000; # my existing apache instance  
