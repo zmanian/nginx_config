@@ -2,7 +2,7 @@
 
 server {
         listen 443 ssl;
-        server_name shameonfeinstein.org;
+        server_name shameonfeinstein.org www.shameonfeinstein.org;
 
         root /home/rtfsf/shameonfeinstein_static;
         index index.html index.htm;

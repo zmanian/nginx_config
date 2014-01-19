@@ -2,7 +2,7 @@
 
 server {
         listen 80;
-        server_name restorethefourthsf.com;
+        server_name restorethefourthsf.com www.restorethefourthsf.com;
 
         return 301 https://$host$request_uri;
 

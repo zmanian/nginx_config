@@ -2,7 +2,7 @@
 
 server {
         listen 80;
-        server_name shameonfeinstein.org;
+        server_name shameonfeinstein.org www.shameonfeinstein.org;
 
         return 301 https://$host$request_uri;
 

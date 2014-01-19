@@ -9,7 +9,7 @@ server {
 
         location /sign {  
     
-          proxy_pass http://localhost:5001; # my existing apache instance  
+          proxy_pass http://localhost:5000; # my existing apache instance  
           proxy_set_header Host $host;  
       }  
 
