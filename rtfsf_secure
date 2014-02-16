@@ -32,4 +32,12 @@ server {
           # re-write redirects to http as to https, example: /home
           proxy_redirect http:// https://;
       }      
+       location /SafeSignUp {
+
+          proxy_pass http://localhost:9001; 
+          proxy_set_header Host $host;
+
+          # re-write redirects to http as to https, example: /home
+          proxy_redirect http:// https://;
+      }      
 }
