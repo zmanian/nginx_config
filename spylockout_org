@@ -2,7 +2,7 @@
 
 server {
         listen 80;
-        server_name spylockout.com www.spylockout.com;
+        server_name spylockout.org www.spylockout.org;
 
         return 301 https://$host$request_uri;
 

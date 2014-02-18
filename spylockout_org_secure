@@ -2,13 +2,13 @@
 
 server {
         listen 443 ssl;
-        server_name spylockout.com www.spylockout.com;
+        server_name spylockout.org www.spylockout.org;
 
         root /home/rtfsf/spylockout;
         index index.html index.htm;
 
         ssl on;
-        ssl_certificate /etc/nginx/ssl/spylockout.pem;
+        ssl_certificate /etc/nginx/ssl/spylockout_org.pem;
         ssl_certificate_key /etc/nginx/ssl/rtfsf.key; 
         add_header Strict-Transport-Security max-age=31536000;
 
