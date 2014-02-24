@@ -1,0 +1,16 @@
+# HTTPS server
+
+server {
+        listen 80;
+        server_name test.spylockout.org;
+
+        root /home/rtfsf/spylockout_testing;
+        index index.html index.htm;
+
+        location /sign {  
+    
+          proxy_pass http://localhost:5001; # my existing apache instance  
+          proxy_set_header Host $host;  
+      }  
+
+}
