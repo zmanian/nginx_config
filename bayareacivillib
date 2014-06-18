@@ -1,0 +1,11 @@
+# HTTPS server
+
+server {
+        listen 80;
+        server_name bayareacivilliberties.org;
+
+        root /home/rtfsf/bayareaciviliberties;
+        index index.html index.htm;
+
+
+}
